@@ -20,7 +20,7 @@ CMX servers.
   * **Linux**
     * Run the script **certgen.sh** in the _cert_install_ directory
     * The script will prompt for information for the certificates and generate three files in the _config/certs_ directory: **server-cert.pem**, **server-csr.pem** and **server-key.pem**
-  
+
 # Configuration #
 
 Configuration needs to be done in CMX to send the notifications. Also the CMX API Server has
@@ -79,11 +79,11 @@ file. The settings in the file are the following.
   * _**users**_
     * **userId** [api] REST api basic authentication user ID
     * **password** [api] REST api basic authentication password hashed
-  
+
 To change **userId** use the REST API **/api/config/v1/hash** to hash the password and
 set the value based upon the returned hash number. **password** should be updated when a new
 password is set. Change the salt to a new 16 hexadecimal number.
-  
+
 # Running CMX API Server #
 
 To start the server running you can run the command **npm start** in the installation directory.
@@ -159,7 +159,7 @@ following are the REST APIs.
     Any other value is considered false. This will filter for associated clients when true and probing only clients if false.
     * The API supports the optional parameter **probingOnly**. The parameter should be set to _true_.
     Any other value is considered false. This will filter for probing only clients when true and associated only clients if false.
-    
+
   * **/api/config/v1/version** Returns the version information for the CMX API Server.
   * **/api/config/v1/hash** Returns the hashed password based upon the salt provided.
     * The API supports the parameter **salt**. This is the salt to use to hash the password.

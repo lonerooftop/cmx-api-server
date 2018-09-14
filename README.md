@@ -67,12 +67,14 @@ file. The settings in the file are the following.
     * **metricCheckInterval** [120] Number of seconds before checking for notify sources to be removed
   * _**restApi**_
     * **port** [9095] Web server port to listen for REST API requests
-    * **workers** [2] Number of workers for the REST API handling
+    * **workers** [7] Number of workers for the REST API handling
     * **metricTtl** [1200] Number of seconds before removing REST sources if not updated
     * **metricCheckInterval** [120] Number of seconds before checking for REST sources to be removed
   * _**device**_
-    * **ttl** [172800] Number of seconds before removing device from current cache if not updated
-    * **checkInterval** [600] Number of seconds before checking for current devices to be removed
+    * **associatedTtl** [604800] Number of seconds for an associated client before removing device from current cache if not updated
+    * **probingTtl** [1200] Number of seconds for a probling client before removing device from current cache if not updated
+    * **ttl** [0] Global number of seconds before removing device from current cache if not updated
+    * **checkInterval** [120] Number of seconds before checking for current devices to be removed
   * _**authentication**_
     * **doApiAuthentication** [true] Should API authentication be done
     * **apiAuthenticationSalt** [a8302c3f35edb347] Salt used to hash password

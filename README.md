@@ -3,7 +3,7 @@
 The CMX API Server can receive notifications from one or multiple CMX servers. The listener will
 then store and track the devices and location information. REST APIs can be used to
 retrieve the active client information. Only the latest client location update will
-be retained on the server. If the client is not updated for a period of time (default 20 minuts)
+be retained on the server. If the client is not updated for a period of time (default 20 minutes)
 then the client will be removed from the cache. The CMX API Server will periodically log information
 about the total client count being tracked and the number of messages being received from the
 CMX servers.
@@ -32,7 +32,7 @@ In CMX a new notification needs to be created to send location updates to the ru
 CMX API Server. A second notification needs to be created to send absence events for
 clients no longer being tracked in CMX. Create the location update notification with the following settings.
 
-  * **Name** Enter a describing the notifications
+  * **Name** Enter a name describing the notifications
   * **Type** Select _Location Update_
   * **Device Type** Select the device type. Preferred option is _Client_
   * **Hierarchy** Select the hierarchy. Preferred option is _All Locations_
@@ -43,11 +43,11 @@ clients no longer being tracked in CMX. Create the location update notification 
 
 Create the absence event notification with the following settings
 
-  * **Name** Enter a describing the notifications
-  * **Type** Select Absence_
+  * **Name** Enter a name describing the notifications
+  * **Type** Select _Absence_
   * **Device Type** Select the device type. Preferred option is _Client_
   * **Mac Address** Enter a MAC Address to filter upon. Preferred option is to leave the field blank
-  * **Receiver** Use _https_ option with the server IP and default port is _9094_. The URI is _api/notify/v1/absence
+  * **Receiver** Use _https_ option with the server IP and default port is _9094_. The URI is _api/notify/v1/absence_
   * **MAC Hashing** MAC hashing should be _OFF_
   * **Message Format** Select _JSON_
 
@@ -101,11 +101,11 @@ Run the command **npm install pm2 -g** to install on the system
 
 Run the command **pm2 start bin/cmxApiServer** in the installation directory.
 
-** Logs **
+**Logs**
 
 CMX API Server will log messages to the console by default. To view the logs run the command **pm2 log**
 
-** Monitor **
+**Monitor**
 
 If you wish to monitor the CPU and memory of the server then run the command **pm2 monit**
 
